@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GravityForms Slack Invite Automation\n"
+"POT-Creation-Date: 2015-10-21 12:28+0530\n"
+"PO-Revision-Date: 2015-10-21 12:28+0530\n"
+"Last-Translator: \n"
+"Language-Team: rtCamp <support@rtcamp.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_c();"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: ../class-gf-slack-invite.php:68
+msgid "Team Name"
+msgstr ""
+
+#: ../class-gf-slack-invite.php:75
+msgid "Authentication Token"
+msgstr ""
+
+#: ../class-gf-slack-invite.php:83
+msgid "Slack settings have been updated."
+msgstr ""
+
+#: ../class-gf-slack-invite.php:102
+#, php-format
+msgid ""
+"Slack provides simple group chat for your team. Use Gravity Forms to invite "
+"member to your Slack team of a new form submission. If you don't have a "
+"Slack account, you can %1$s sign up for one here.%2$s"
+msgstr ""
+
+#: ../class-gf-slack-invite.php:111
+#, php-format
+msgid ""
+"Gravity Forms Slack Add-On requires an API authentication token (TOKEN MUST "
+"HAVE ADMIN USERS PRIVILEGES). You can find your authentication token by "
+"visiting the %1$sSlack Web API page%2$s while logged into your Slack account."
+msgstr ""
+
+#: ../class-gf-slack-invite.php:138
+msgid "Enable"
+msgstr ""
+
+#: ../class-gf-slack-invite.php:145
+msgid "Email"
+msgstr ""
+
+#: ../class-gf-slack-invite.php:171
+msgid "Invite"
+msgstr ""
+
+#: ../class-gf-slack-invite.php:172
+msgid "Enable this to invite user to your team using."
+msgstr ""
+
+#: ../class-gf-slack-invite.php:174
+msgid "Email field to invite"
+msgstr ""
+
+#: ../class-gf-slack-invite.php:175
+msgid "Select email address field where invite need to be send."
+msgstr ""
+
+#: ../class-gf-slack-invite.php:203
+msgid "Options"
+msgstr ""
+
+#: ../class-gf-slack-invite.php:204
+msgid "Send Invitation"
+msgstr ""
+
+#: ../class-gf-slack-invite.php:243
+msgid "Feed was not processed because API was not initialized."
+msgstr ""
+
+#: ../class-gf-slack-invite.php:272
+msgid "Something went wrong  while sending Invitation."
+msgstr ""

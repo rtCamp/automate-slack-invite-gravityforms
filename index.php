@@ -1,6 +1,6 @@
 <?php
 /* 
-Plugin Name: gravityforms slack invitation
+Plugin Name: GravityForms Slack Invite Automation
 Plugin URI: http://www.rtcamp.com
 Description: Automatic invite member to slack team using gravity form.
 Version: 0.1
