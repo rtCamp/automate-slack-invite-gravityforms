@@ -29,7 +29,7 @@ class GFSlackInvite extends GFFeedAddOn {
      *
      * @access public
      * @static
-     * @return GFSlack
+     * @return GFSlackInvite
      */
     public static function get_instance() {
 
@@ -99,7 +99,7 @@ class GFSlackInvite extends GFFeedAddOn {
 
         $description  = '<p>';
         $description .= sprintf(
-            esc_html__( 'Slack provides simple group chat for your team. Use Gravity Forms to alert your Slack channels of a new form submission. If you don\'t have a Slack account, you can %1$s sign up for one here.%2$s', 'gravityformsslackinvite' ),
+            esc_html__( 'Slack provides simple group chat for your team. Use Gravity Forms to invite member to your Slack team of a new form submission. If you don\'t have a Slack account, you can %1$s sign up for one here.%2$s', 'gravityformsslackinvite' ),
             '<a href="https://www.slack.com/" target="_blank">', '</a>'
         );
         $description .= '</p>';
@@ -108,7 +108,7 @@ class GFSlackInvite extends GFFeedAddOn {
 
             $description .= '<p>';
             $description .= sprintf(
-                esc_html__( 'Gravity Forms Slack Add-On requires an API authentication token. You can find your authentication token by visiting the %1$sSlack Web API page%2$s while logged into your Slack account.', 'gravityformsslackinvite' ),
+                esc_html__( 'Gravity Forms Slack Add-On requires an API authentication token (TOKEN MUST HAVE ADMIN USERS PRIVILEGES). You can find your authentication token by visiting the %1$sSlack Web API page%2$s while logged into your Slack account.', 'gravityformsslackinvite' ),
                 '<a href="https://api.slack.com/web" target="_blank">', '</a>'
             );
             $description .= '</p>';
@@ -127,25 +127,16 @@ class GFSlackInvite extends GFFeedAddOn {
      */
     public function feed_settings_fields() {
         $choices = array();
-        $choices[] = array( 'label' => 'Enable','value' => 'true' );
-        $choices[] = array( 'label' => 'Disable','value' => 'false' );
+
+        $choices[] = array( 'label' => 'Turn checkbox on to enable slack invitation.','name' => 'invite' );
         $settings = array(
             array(
                 'title' =>	'Invite to slack team',
                 'fields' =>	array(
                     array(
-                        'name'           => 'feed_name',
-                        'label'          => esc_html__( 'Name', 'gravityformsslackinvite' ),
-                        'type'           => 'text',
-                        'class'          => 'medium',
-                        'required'       => true,
-                        'tooltip'        => $this->tooltip_for_feed_setting( 'feed_name' )
-                    ),
-                    array(
                         'name'           => 'invite',
-                        'label'          => esc_html__( 'Invite user', 'gravityformsslackinvite' ),
-                        'type'           => 'radio',
-                        'required'       => true,
+                        'label'          => __( 'Enable', 'gravityformsslackinvite' ),
+                        'type'           => 'checkbox',
                         'choices'         => $choices,
                         'tooltip'        => $this->tooltip_for_feed_setting( 'invite' )
                     ),
@@ -175,16 +166,13 @@ class GFSlackInvite extends GFFeedAddOn {
 
         /* Setup tooltip array */
         $tooltips = array();
-        /* Feed Name */
-        $tooltips['feed_name']  = '<h6>'. esc_html__( 'Name', 'gravityformsslackinvite' ) .'</h6>';
-        $tooltips['feed_name'] .= esc_html__( 'Enter a feed name to uniquely identify this setup.', 'gravityformsslackinvite' );
 
         /* Invite */
         $tooltips['invite']  = '<h6>'. esc_html__( 'Invite', 'gravityformsslackinvite' ) .'</h6>';
-        $tooltips['invite'] .= esc_html__( 'Enable this to invite user to your team using..', 'gravityformsslackinvite' );
+        $tooltips['invite'] .= esc_html__( 'Enable this to invite user to your team using.', 'gravityformsslackinvite' );
 
         $tooltips['message']  = '<h6>'. __( 'Email field to invite', 'gravityformsslackinvite' ) .'</h6>';
-        $tooltips['message'] .= esc_html__( 'Select email field to send invite of slack team.', 'gravityformsslackinvite' ) . '<br /><br />';
+        $tooltips['message'] .= esc_html__( 'Select email address field where invite need to be send.', 'gravityformsslackinvite' ) . '<br /><br />';
 
         /* Return desired tooltip */
         return $tooltips[ $field ];
@@ -212,7 +200,7 @@ class GFSlackInvite extends GFFeedAddOn {
     public function feed_list_columns() {
 
         return array(
-            'feed_name' => esc_html__( 'Name', 'gravityformsslackinvite' ),
+            '' => esc_html__( 'Options', 'gravityformsslackinvite' ),
             'enable'   => esc_html__( 'Send Invitation', 'gravityformsslackinvite' )
         );
 
