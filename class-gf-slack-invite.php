@@ -7,10 +7,10 @@ class GFSlackInvite extends GFFeedAddOn {
     protected $_version = GF_SLACK_INVITE_VERSION;
     protected $_min_gravityforms_version = '1.9.12';
     protected $_slug = 'gravityformsslackinvite';
-    protected $_path = 'gravityforms-slack-invitation/index.php';
+    protected $_path = 'gravityforms-slack-invite-automation/gravityforms-slack-invite-automation.php';
     protected $_full_path = __FILE__;
     protected $_url = 'http://www.rtcamp.com';
-    protected $_title = 'Gravity Forms Slack Invite Add-On';
+    protected $_title = 'GravityForms Slack Invite Automation Add-On';
     protected $_short_title = 'Slack  Invite';
     protected $_enable_rg_autoupgrade = true;
     protected $api = null;
