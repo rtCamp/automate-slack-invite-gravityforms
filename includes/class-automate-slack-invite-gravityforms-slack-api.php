@@ -1,5 +1,11 @@
 <?php
-	
+/**
+ * This class handles API call to slack.com.
+ *
+ * @package    Gravityforms Slack Invite Automation
+ * @author     Jignesh Nakrani <jignesh.nakrani>
+ */
+
 	class Slack_Invite {
 		
 		protected $api_url = 'https://slack.com/api/';

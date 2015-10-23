@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GravityForms Slack Invite Automation\n"
-"POT-Creation-Date: 2015-10-21 12:37+0530\n"
-"PO-Revision-Date: 2015-10-21 12:37+0530\n"
+"POT-Creation-Date: 2015-10-23 18:24+0530\n"
+"PO-Revision-Date: 2015-10-23 18:24+0530\n"
 "Last-Translator: \n"
 "Language-Team: rtCamp <support@rtcamp.com>\n"
 "Language: English\n"
@@ -18,19 +18,19 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: .\n"
 
-#: ../class-gf-slack-invite.php:68
+#: ../public/class-automate-slack-invite-gravityforms.php:75
 msgid "Team Name"
 msgstr ""
 
-#: ../class-gf-slack-invite.php:75
+#: ../public/class-automate-slack-invite-gravityforms.php:82
 msgid "Authentication Token"
 msgstr ""
 
-#: ../class-gf-slack-invite.php:83
+#: ../public/class-automate-slack-invite-gravityforms.php:90
 msgid "Slack settings have been updated."
 msgstr ""
 
-#: ../class-gf-slack-invite.php:102
+#: ../public/class-automate-slack-invite-gravityforms.php:109
 #, php-format
 msgid ""
 "Slack provides simple group chat for your team. Use Gravity Forms to invite "
@@ -38,7 +38,7 @@ msgid ""
 "Slack account, you can %1$s sign up for one here.%2$s"
 msgstr ""
 
-#: ../class-gf-slack-invite.php:111
+#: ../public/class-automate-slack-invite-gravityforms.php:118
 #, php-format
 msgid ""
 "Gravity Forms Slack Add-On requires an API authentication token (TOKEN MUST "
@@ -46,42 +46,42 @@ msgid ""
 "visiting the %1$sSlack Web API page%2$s while logged into your Slack account."
 msgstr ""
 
-#: ../class-gf-slack-invite.php:138
+#: ../public/class-automate-slack-invite-gravityforms.php:145
 msgid "Enable"
 msgstr ""
 
-#: ../class-gf-slack-invite.php:145
+#: ../public/class-automate-slack-invite-gravityforms.php:152
 msgid "Email"
 msgstr ""
 
-#: ../class-gf-slack-invite.php:171
+#: ../public/class-automate-slack-invite-gravityforms.php:178
 msgid "Invite"
 msgstr ""
 
-#: ../class-gf-slack-invite.php:172
+#: ../public/class-automate-slack-invite-gravityforms.php:179
 msgid "Enable this to invite user to your team using."
 msgstr ""
 
-#: ../class-gf-slack-invite.php:174
+#: ../public/class-automate-slack-invite-gravityforms.php:181
 msgid "Email field to invite"
 msgstr ""
 
-#: ../class-gf-slack-invite.php:175
+#: ../public/class-automate-slack-invite-gravityforms.php:182
 msgid "Select email address field where invite need to be send."
 msgstr ""
 
-#: ../class-gf-slack-invite.php:203
+#: ../public/class-automate-slack-invite-gravityforms.php:210
 msgid "Options"
 msgstr ""
 
-#: ../class-gf-slack-invite.php:204
+#: ../public/class-automate-slack-invite-gravityforms.php:211
 msgid "Send Invitation"
 msgstr ""
 
-#: ../class-gf-slack-invite.php:243
+#: ../public/class-automate-slack-invite-gravityforms.php:250
 msgid "Feed was not processed because API was not initialized."
 msgstr ""
 
-#: ../class-gf-slack-invite.php:272
+#: ../public/class-automate-slack-invite-gravityforms.php:279
 msgid "Something went wrong  while sending Invitation."
 msgstr ""

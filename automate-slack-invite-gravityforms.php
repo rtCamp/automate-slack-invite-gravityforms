@@ -1,12 +1,12 @@
 <?php
 /* 
-Plugin Name: GravityForms Slack Invite Automation
+Plugin Name: Automate Slack Invite Gravityforms
 Plugin URI: http://www.rtcamp.com/
 Description: GravityForms addon to automatically invite a user to your Slack, using email address form field.
 Version: 1.0.0
 Author: rtCamp
 Author URI: http://rtcamp.com/
-Text Domain: gravityforms-slack-invite-automation
+Text Domain: automate-slack-invite-gravityforms
 License:           GPL-2.0+
 License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
 */
@@ -17,12 +17,12 @@ define ( 'GF_SLACK_INVITE_VERSION', '0.1' );
 class GF_Slack_Invitation {
 
     public static function load(){
-        require_once('public/class-gravityforms-slack-invite-automation.php');
-        GFAddOn::register('gravityforms_slack_invite_automation_public');
+        require_once('public/class-automate-slack-invite-gravityforms.php');
+        GFAddOn::register('automate_slack_invite_gravityforms_public');
     }
 
 }
 
 function gf_slack() {
-    return gravityforms_slack_invite_automation_public::get_instance();
+    return automate_slack_invite_gravityforms_public::get_instance();
 }
