@@ -1,4 +1,4 @@
-# gravityforms-slack-invitation
+# automate-slack-invite-gravityform
 
 * **Contributors:** [rtcamp] (http://profiles.wordpress.org/rtcamp),[jignesh.nakrani] (http://profiles.wordpress.org/jignesh.nakrani)
 
