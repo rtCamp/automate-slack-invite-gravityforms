@@ -1,4 +1,4 @@
-=== gravityforms-slack-invitation ===
+=== automate-slack-invite-gravityform ===
 
 Contributors: rtcamp, jignesh.nakrani
 Donate link: http://rtcamp.com/donate/

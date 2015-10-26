@@ -1,13 +1,20 @@
 <?php
 
+/**
+ * This class use to render form settings and use to handel form submission call.
+ *
+ * @package    Gravityforms Slack Invite Automation
+ * @author     Jignesh Nakrani <jignesh.nakrani>
+ */
+
 GFForms::include_feed_addon_framework();
 
-class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
+class automate_slack_invite_gravityforms_public extends GFFeedAddOn {
 
     protected $_version = GF_SLACK_INVITE_VERSION;
     protected $_min_gravityforms_version = '1.9.12';
-    protected $_slug = 'gravityforms-slack-invite-automation';
-    protected $_path = 'gravityforms-slack-invite-automation/gravityforms-slack-invite-automation.php';
+    protected $_slug = 'automate-slack-invite-gravityforms';
+    protected $_path = 'automate-slack-invite-gravityforms/automate-slack-invite-gravityforms.php';
     protected $_full_path = __FILE__;
     protected $_url = 'http://www.rtcamp.com';
     protected $_title = 'GravityForms Slack Invite Automation Add-On';
@@ -29,7 +36,7 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
      *
      * @access public
      * @static
-     * @return gravityforms_slack_invite_automation_public
+     * @return automate_slack_invite_gravityforms_public
      */
     public static function get_instance() {
 
@@ -65,14 +72,14 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
                 'fields'      => array(
                     array(
                         'name'              => 'team_domain',
-                        'label'             => esc_html__( 'Team Name', 'gravityforms-slack-invite-automation' ),
+                        'label'             => esc_html__( 'Team Name', 'automate-slack-invite-gravityforms' ),
                         'type'              => 'text',
                         'class'             => 'large',
                         'feedback_callback' => array( $this, 'initialize_api' )
                     ),
                     array(
                         'name'              => 'auth_token',
-                        'label'             => esc_html__( 'Authentication Token', 'gravityforms-slack-invite-automation' ),
+                        'label'             => esc_html__( 'Authentication Token', 'automate-slack-invite-gravityforms' ),
                         'type'              => 'text',
                         'class'             => 'large',
                         'feedback_callback' => array( $this, 'initialize_api' )
@@ -80,7 +87,7 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
                     array(
                         'type'              => 'save',
                         'messages'          => array(
-                            'success' => esc_html__( 'Slack settings have been updated.', 'gravityforms-slack-invite-automation' )
+                            'success' => esc_html__( 'Slack settings have been updated.', 'automate-slack-invite-gravityforms' )
                         ),
                     ),
                 ),
@@ -99,7 +106,7 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
 
         $description  = '<p>';
         $description .= sprintf(
-            esc_html__( 'Slack provides simple group chat for your team. Use Gravity Forms to invite member to your Slack team of a new form submission. If you don\'t have a Slack account, you can %1$s sign up for one here.%2$s', 'gravityforms-slack-invite-automation' ),
+            esc_html__( 'Slack provides simple group chat for your team. Use Gravity Forms to invite member to your Slack team of a new form submission. If you don\'t have a Slack account, you can %1$s sign up for one here.%2$s', 'automate-slack-invite-gravityforms' ),
             '<a href="https://www.slack.com/" target="_blank">', '</a>'
         );
         $description .= '</p>';
@@ -108,7 +115,7 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
 
             $description .= '<p>';
             $description .= sprintf(
-                esc_html__( 'Gravity Forms Slack Add-On requires an API authentication token (TOKEN MUST HAVE ADMIN USERS PRIVILEGES). You can find your authentication token by visiting the %1$sSlack Web API page%2$s while logged into your Slack account.', 'gravityforms-slack-invite-automation' ),
+                esc_html__( 'Gravity Forms Slack Add-On requires an API authentication token (TOKEN MUST HAVE ADMIN USERS PRIVILEGES). You can find your authentication token by visiting the %1$sSlack Web API page%2$s while logged into your Slack account.', 'automate-slack-invite-gravityforms' ),
                 '<a href="https://api.slack.com/web" target="_blank">', '</a>'
             );
             $description .= '</p>';
@@ -135,14 +142,14 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
                 'fields' =>	array(
                     array(
                         'name'           => 'invite',
-                        'label'          => __( 'Enable', 'gravityforms-slack-invite-automation' ),
+                        'label'          => __( 'Enable', 'automate-slack-invite-gravityforms' ),
                         'type'           => 'checkbox',
                         'choices'         => $choices,
                         'tooltip'        => $this->tooltip_for_feed_setting( 'invite' )
                     ),
                     array(
                         'name'           => 'email',
-                        'label'          => esc_html__( 'Email', 'gravityforms-slack-invite-automation' ),
+                        'label'          => esc_html__( 'Email', 'automate-slack-invite-gravityforms' ),
                         'type'           => 'text',
                         'required'       => true,
                         'class'          => 'medium merge-tag-support mt-position-right mt-hide_all_fields',
@@ -168,11 +175,11 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
         $tooltips = array();
 
         /* Invite */
-        $tooltips['invite']  = '<h6>'. esc_html__( 'Invite', 'gravityforms-slack-invite-automation' ) .'</h6>';
-        $tooltips['invite'] .= esc_html__( 'Enable this to invite user to your team using.', 'gravityforms-slack-invite-automation' );
+        $tooltips['invite']  = '<h6>'. esc_html__( 'Invite', 'automate-slack-invite-gravityforms' ) .'</h6>';
+        $tooltips['invite'] .= esc_html__( 'Enable this to invite user to your team using.', 'automate-slack-invite-gravityforms' );
 
-        $tooltips['message']  = '<h6>'. __( 'Email field to invite', 'gravityforms-slack-invite-automation' ) .'</h6>';
-        $tooltips['message'] .= esc_html__( 'Select email address field where invite need to be send.', 'gravityforms-slack-invite-automation' ) . '<br /><br />';
+        $tooltips['message']  = '<h6>'. __( 'Email field to invite', 'automate-slack-invite-gravityforms' ) .'</h6>';
+        $tooltips['message'] .= esc_html__( 'Select email address field where invite need to be send.', 'automate-slack-invite-gravityforms' ) . '<br /><br />';
 
         /* Return desired tooltip */
         return $tooltips[ $field ];
@@ -200,8 +207,8 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
     public function feed_list_columns() {
 
         return array(
-            '' => esc_html__( 'Options', 'gravityforms-slack-invite-automation' ),
-            'enable'   => esc_html__( 'Send Invitation', 'gravityforms-slack-invite-automation' )
+            '' => esc_html__( 'Options', 'automate-slack-invite-gravityforms' ),
+            'enable'   => esc_html__( 'Send Invitation', 'automate-slack-invite-gravityforms' )
         );
 
     }
@@ -240,7 +247,7 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
         }
         /* If Slack instance is not initialized, exit. */
         if ( ! $this->initialize_api() ) {
-            $this->add_feed_error( esc_html__( 'Feed was not processed because API was not initialized.', 'gravityforms-slack-invite-automation' ), $feed, $entry, $form );
+            $this->add_feed_error( esc_html__( 'Feed was not processed because API was not initialized.', 'automate-slack-invite-gravityforms' ), $feed, $entry, $form );
             return;
         }
 
@@ -269,7 +276,7 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
         if ( rgar( $message_channel, 'ok' ) ) {
             $this->log_debug( __METHOD__ . "(): Invitation is send successfully." );
         } else {
-            $this->add_feed_error( esc_html__( 'Something went wrong  while sending Invitation.', 'gravityforms-slack-invite-automation' ), $feed, $entry, $form );
+            $this->add_feed_error( esc_html__( 'Something went wrong  while sending Invitation.', 'automate-slack-invite-gravityforms' ), $feed, $entry, $form );
         }
 
     }
@@ -287,7 +294,7 @@ class gravityforms_slack_invite_automation_public extends GFFeedAddOn {
 
         /* Load the API library. */
         if ( ! class_exists( 'Slack_Invite' ) ) {
-            require_once(__DIR__ . '/../includes/class-gravityforms-slack-invite-automation-slack-api.php');
+            require_once(__DIR__ . '/../includes/class-automate-slack-invite-gravityforms-slack-api.php');
         }
 
         /* Get the OAuth token and team domain. */
