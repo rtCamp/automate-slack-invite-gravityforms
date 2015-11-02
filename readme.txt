@@ -15,14 +15,14 @@ With this plugin, you can send auto slack invitation via email to user who submi
 This plugin works with Gravity form only. Once you have created a gravity form and do required settings, this plugin will start working.  Whenever new entries are submitted via gravity form, the respective user will receive an email with slack channel invitation link.
 
 
-== Requirement ==
+= Requirement =
 
 1. Gravity Form plugin. 
 2. Slack Team Name.
 3. Slack Authentication Token.
 
 
-== How this plugin works ==
+= How this plugin works =
 
 1. Set the "Team Name" and slack authentication token under Gravity Form -> Settings -> Slack Invite.
 2. Now, create a gravity form, go to Form Setting -> Slack Invite and click on "Create one" link to set an email field.
