@@ -1,8 +1,8 @@
 <?php
 /* 
-Plugin Name: Automate Slack Invite Gravityforms
+Plugin Name: Automate Slack Invite Gravity Forms
 Plugin URI: http://www.rtcamp.com/
-Description: GravityForms addon to automatically invite a user to your Slack, using email address form field.
+Description: Gravity Forms add-on to automatically invite a user to your Slack, using email address form field.
 Version: 1.0
 Author: rtCamp
 Author URI: http://rtcamp.com/
