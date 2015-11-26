@@ -66,3 +66,6 @@ Please check [Github](https://github.com/rtCamp/automate-slack-invite-gravityfor
 
 = 1.0 =
 * Invite user to slack team using Gravity Forms.
+
+= 1.1 =
+* Removed function conflict.
