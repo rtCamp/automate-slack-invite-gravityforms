@@ -5,7 +5,7 @@ Tags: GravityForms, Gravity Forms, Slack, Invite, Invitation, Automation
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: WordPress 3.6, Gravity form 1.9.14
-Tested up to: 4.3.1
+Tested up to: 4.4
 Stable tag: 1.1
 
 
