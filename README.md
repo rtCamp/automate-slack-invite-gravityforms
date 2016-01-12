@@ -67,3 +67,6 @@ Please check [Github](https://github.com/rtCamp/automate-slack-invite-gravityfor
 
 #### 1.1 ####
 * Removed function conflict.
+
+#### 1.2 ####
+* Removed gravity forms licence check.

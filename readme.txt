@@ -5,8 +5,8 @@ Tags: GravityForms, Gravity Forms, Slack, Invite, Invitation, Automation
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: WordPress 3.6, Gravity form 1.9.14
-Tested up to: 4.3.1
-Stable tag: 1.1
+Tested up to: 4.4.1
+Stable tag: 1.2
 
 
 == Description ==
@@ -69,3 +69,6 @@ Please check [Github](https://github.com/rtCamp/automate-slack-invite-gravityfor
 
 = 1.1 =
 * Removed function conflict.
+
+= 1.2 =
+* Removed gravity forms licence check.
