@@ -19,7 +19,7 @@ class automate_slack_invite_gravityforms_public extends GFFeedAddOn {
     protected $_url = 'http://www.rtcamp.com';
     protected $_title = 'GravityForms Slack Invite Automation Add-On';
     protected $_short_title = 'Slack  Invite';
-    protected $_enable_rg_autoupgrade = true;
+    protected $_enable_rg_autoupgrade = false;
     protected $api = null;
     private static $_instance = null;
 
