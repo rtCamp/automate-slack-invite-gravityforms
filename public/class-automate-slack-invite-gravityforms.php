@@ -72,7 +72,7 @@ class automate_slack_invite_gravityforms_public extends GFFeedAddOn {
                 'fields'      => array(
                     array(
                         'name'              => 'team_domain',
-                        'label'             => esc_html__( 'Team Name', 'automate-slack-invite-gravityforms' ),
+                        'label'             => esc_html__( 'Team Name, this is the name from the Slack URL', 'automate-slack-invite-gravityforms' ),
                         'type'              => 'text',
                         'class'             => 'large',
                         'feedback_callback' => array( $this, 'initialize_api' )
